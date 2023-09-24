@@ -1,0 +1,231 @@
+<resources>
+    <string name="app_name">New2</string>
+    <!--                      Chia Lei                           -->
+    <!-- welcome -->
+    <string name="WelcomeText1">Welcome to FITFIT apps</string>
+    <string name="WelcomeText2">Plan your workout and start healthy from now.</string>
+
+    <string name="LoginGoogleEmail">Login with Google Email</string>
+    <string name="LoginFb">Login with Facebook</string>
+    <string name="LoginInsta">Login with Instagram</string>
+
+    <!-- sign up -->
+    <string name="SignUp">Sign Up</string>
+
+    <string name="signupText1">Already an user? Login</string>
+
+    <!-- login -->
+    <string name="Login">Login</string>
+
+    <string name="registerText1">Not register yet? Sign Up</string>
+
+    <!-- bottom -->
+    <string name="home">Home</string>
+    <string name="workout">Workout</string>
+    <string name="add_record">Add Record</string>
+    <string name="chart">Chart</string>
+    <string name="profile">Profile</string>
+
+    <!-- home -->
+    <string name="meal_plan">Meal Plan</string>
+    <string name="meal_plan_desc">Meal Plan Description</string>
+
+    <!-- home meal plan detail-->
+    <string name="homeDescription1">If doesn\'t Challenge you</string>
+    <string name="homeDescription2">It doesn\'t Change you</string>
+    <string name="mealPlan">Meal Plan</string>
+    <string name="workoutPlan">Workout Plan</string>
+    <string name="weight_lossPlan">Weight Loss Plan</string>
+    <string name="nutritionKnowledge">Nutrition Knowledge</string>
+    <string name="activityPlan">Activity Plan</string>
+
+    <string name="meal_plan_title">Meal Plan Title</string>
+    <string name="meal_plan_detail_desc">Meal Plan Description</string>
+
+    <string name="keep_fit_plan">
+        A meal plan to keep fit typically focuses on providing your body with the right balance of
+        nutrients, including lean protein, complex carbohydrates, healthy fats, and a variety of
+        fruits and vegetables. Additionally, it\'s important to control portion sizes and stay
+        hydrated. Here\'s a sample meal plan for a day:\n\n
+
+        Breakfast:\n
+        •Oatmeal with berries and a sprinkle of nuts or seeds\n
+        •A glass of water or herbal tea\n\n
+
+        Mid-Morning Snack:\n
+        •Greek yogurt with honey and a handful of mixed nuts\n
+        •A piece of fruit, such as an apple or a banana\n\n
+
+        Lunch:\n
+        •Grilled chicken breast or tofu salad with a variety of colorful vegetables
+        (spinach, bell peppers, cucumbers, cherry tomatoes)\n
+        •A vinaigrette dressing made with olive oil and balsamic vinegar\n
+        •Quinoa or brown rice on the side\n\n
+
+        Afternoon Snack:\n
+        •Carrot and celery sticks with hummus\n
+        •A small portion of cottage cheese or a boiled egg\n\n
+
+        Dinner:\n
+        •Baked or grilled salmon or a vegetarian protein source like lentils or chickpeas\n
+        •Steamed broccoli, cauliflower, and carrots\n
+        •A small serving of whole-grain pasta or brown rice\n\n
+
+        Evening Snack (optional):\n
+        •A handful of berries or a piece of dark chocolate (70% cocoa or higher)\n\n
+        Hydration: Throughout the day, aim to drink plenty of water to stay hydrated.\n
+        You can also enjoy herbal teas or infused water with slices of lemon, cucumber, or mint.\n\n
+
+        Tips:\n
+        •Try to keep your portion sizes moderate and avoid overeating.\n
+        •Limit sugary and processed foods, as well as high-calorie snacks and drinks.\n
+        •Choose lean sources of protein, such as poultry, fish, tofu, beans, and legumes.\n
+        •Opt for whole grains over refined grains for added fiber and nutrients.\n
+        •Incorporate a variety of fruits and vegetables to ensure you get a wide range of vitamins
+        and minerals.
+    </string>
+
+    <string name="weight_loss_plan">
+        Please note that this is a general example, and individual dietary needs may vary. Be sure to
+        consult with a healthcare provider or registered dietitian before starting any weight loss plan.\n\n
+
+        Day 1:\n
+        Breakfast: Scrambled eggs with spinach and tomatoes.\n
+        Snack: Greek yogurt with berries.\n
+        Lunch: Grilled chicken breast with a side salad (lettuce, cucumber, and vinaigrette dressing).\n
+        Snack: Carrot and celery sticks with hummus.\n
+        Dinner: Baked salmon with steamed broccoli and quinoa.\n\n
+
+        Day 2:\n
+        Breakfast: Oatmeal with sliced banana and a teaspoon of honey.\n
+        Snack: A small handful of almonds.\n
+        Lunch: Turkey and avocado wrap with whole-grain tortilla.\n
+        Snack: Sliced bell peppers with guacamole.\n
+        Dinner: Stir-fried tofu with mixed vegetables and brown rice.\n\n
+
+        Day 3:\n
+        Breakfast: Greek yogurt parfait with granola and mixed berries.\n
+        Snack: Apple slices with almond butter.\n
+        Lunch: Lentil and vegetable soup with a side of mixed greens.\n
+        Snack: Cottage cheese with pineapple.\n
+        Dinner: Grilled shrimp with asparagus and quinoa.\n\n
+
+        Day 4:\n
+        Breakfast: Whole-grain toast with smashed avocado and poached eggs.\n
+        Snack: A handful of walnuts.\n
+        Lunch: Grilled vegetable and chickpea salad with balsamic dressing.\n
+        Snack: Sliced cucumber with tzatziki sauce.\n
+        Dinner: Baked chicken breast with roasted Brussels sprouts and sweet potato.\n\n
+
+        Day 5:\n
+        Breakfast: Smoothie with spinach, banana, and protein powder.\n
+        Snack: Low-fat string cheese.\n
+        Lunch: Quinoa salad with black beans, corn, and salsa.\n
+        Snack: Cherry tomatoes with mozzarella cheese.\n
+        Dinner: Baked cod with sautéed kale and brown rice.\n\n
+
+        Day 6:\n
+        Breakfast: Cottage cheese with sliced peaches and a drizzle of honey.\n
+        Snack: Baby carrots with hummus.\n
+        Lunch: Turkey and vegetable stir-fry with brown rice.\n
+        Snack: A small handful of mixed nuts.\n
+        Dinner: Grilled steak with roasted cauliflower and quinoa.\n\n
+
+        Day 7:\n
+        Breakfast: Whole-grain waffles with Greek yogurt and fresh strawberries.\n
+        Snack: Sliced bell peppers with guacamole.\n
+        Lunch: Spinach and feta stuffed chicken breast with a side of green beans.\n
+        Snack: Sliced apple with a sprinkle of cinnamon.\n
+        Dinner: Baked tilapia with asparagus and wild rice.\n\n
+
+        Remember to stay hydrated throughout the day by drinking plenty of water or herbal tea. This
+        meal plan emphasizes whole foods, lean protein sources, fruits, vegetables, and whole grains,
+        which can support a balanced and healthy approach to weight loss. Adjust portion sizes to fit
+        your specific calorie needs and dietary preferences.
+    </string>
+
+    <string name="muscle_building_plan">
+        High-protein diets can help support muscle growth and repair. Please keep in mind that individual
+        protein needs may vary, so adjust portion sizes and total daily protein intake based on your
+        specific requirements and goals.\n\n
+
+        Day 1:\n
+        Breakfast: Scrambled eggs with spinach and tomatoes.\n
+        Snack: Greek yogurt with a handful of almonds.\n
+        Lunch: Grilled chicken breast with quinoa and mixed vegetables.\n
+        Snack: Cottage cheese with pineapple chunks.\n
+        Dinner: Baked salmon with steamed broccoli and brown rice.\n\n
+
+        Day 2:\n
+        Breakfast: Protein smoothie with whey protein powder, banana, and almond milk.\n
+        Snack: Sliced cucumber with hummus.\n
+        Lunch: Tuna salad (canned tuna, mixed greens, cherry tomatoes, and olive oil dressing).\n
+        Snack: Hard-boiled eggs.\n
+        Dinner: Lean beef stir-fry with broccoli and cauliflower rice.\n\n
+
+        Day 3:\n
+        Breakfast: Omelet with spinach, mushrooms, and feta cheese.\n
+        Snack: Low-fat cottage cheese with sliced strawberries.\n
+        Lunch: Grilled turkey burger with a side salad.\n
+        Snack: Edamame (steamed young soybeans).\n
+        Dinner: Baked cod with quinoa and asparagus.\n\n
+
+        Day 4:\n
+        Breakfast: Greek yogurt parfait with granola and mixed berries.\n
+        Snack: Mixed nuts (almonds, walnuts, and cashews).\n
+        Lunch: Chicken and vegetable kebabs with tzatziki sauce and whole-grain pita.\n
+        Snack: Sliced bell peppers with guacamole.\n
+        Dinner: Pork tenderloin with roasted Brussels sprouts and sweet potato.\n\n
+
+        Day 5:\n
+        Breakfast: Protein pancakes topped with sliced bananas and a drizzle of honey.\n
+        Snack: Low-fat string cheese.\n
+        Lunch: Beef and broccoli stir-fry with brown rice.\n
+        Snack: Sliced apples with peanut butter.\n
+        Dinner: Grilled shrimp with quinoa and sautéed kale.\n\n
+
+        Day 6:\n
+        Breakfast: Scrambled eggs with smoked salmon and dill.\n
+        Snack: Celery sticks with almond butter.\n
+        Lunch: Lentil and vegetable soup with a side of mixed greens.\n
+        Snack: Greek yogurt with a drizzle of honey.\n
+        Dinner: Baked chicken thighs with roasted asparagus and wild rice.\n\n
+
+        Day 7:\n
+        Breakfast: Spinach and mushroom frittata.\n
+        Snack: Baby carrots with hummus.\n
+        Lunch: Turkey and black bean salad with salsa dressing.\n
+        Snack: Sliced cucumber with tzatziki sauce.\n
+        Dinner: Baked tilapia with quinoa and steamed green beans.\n\n
+
+        Remember to stay hydrated by drinking plenty of water throughout the day, as proper hydration
+        is essential for muscle recovery and overall health. This meal plan emphasizes lean protein
+        sources such as chicken, fish, lean beef, and dairy products to support muscle growth and repair.
+        Adjust portion sizes and total daily protein intake as needed based on your specific dietary
+        requirements and fitness goals.
+    </string>
+
+    <!-- add record -->
+    <string name="recordDescription1">Work Out + Eat Well + Be Patient</string>
+    <string name="recordDescription2">Your Body Will Reward You!!!</string>
+
+    <string name="fitnessGoals">Fitness Goals</string>
+    <string name="physicalActivity">Physical Activity</string>
+    <string name="weight_body">Weight &amp; Body</string>
+    <string name="waterIntake">Water Intake</string>
+    <string name="caloriesBurned">Calories Burned</string>
+    <string name="dietaryIntake">Dietary Intake</string>
+    <string name="sleepPatterns">Sleep Patterns</string>
+    <string name="heartRate_bloodPressure">Blood Pressure</string>
+    <string name="userName">User</string>
+    <string name="email">user@gmail.com</string>
+
+    !-- profile -->
+    <string name="goals">Goals</string>
+    <string name="feedback">Feedback</string>
+    <!-- fragment -->
+    <string name="notification">Notification</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--                      Chia Lei                           -->
+</resources>
