@@ -100,6 +100,9 @@
         <action
             android:id="@+id/action_workoutFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_workoutFragment_to_waterIntakeListFragment"
+            app:destination="@id/waterIntakeListFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
@@ -126,5 +129,26 @@
         <action
             android:id="@+id/action_editProfileFragment_to_viewProfileFragment"
             app:destination="@id/viewProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/waterIntakeListFragment"
+        android:name="com.example.new2.WaterIntakeListFragment"
+        android:label="fragment_water_intake_list"
+        tools:layout="@layout/fragment_water_intake_list" >
+        <action
+            android:id="@+id/action_waterIntakeListFragment_to_addWaterIntakeFragment"
+            app:destination="@id/addWaterIntakeFragment" />
+        <action
+            android:id="@+id/action_waterIntakeListFragment_to_workoutFragment"
+            app:destination="@id/workoutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addWaterIntakeFragment"
+        android:name="com.example.new2.AddWaterIntakeFragment"
+        android:label="fragment_add_water_intake"
+        tools:layout="@layout/fragment_add_water_intake" >
+        <action
+            android:id="@+id/action_addWaterIntakeFragment_to_waterIntakeListFragment"
+            app:destination="@id/waterIntakeListFragment" />
     </fragment>
 </navigation>
