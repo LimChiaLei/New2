@@ -72,6 +72,7 @@ class WaterIntakeListFragment : Fragment() {
                     adapter = WaterIntakeAdapter(waterIntakeRecordLists)
                     recyclerView.adapter = adapter
                 }
+
             } catch (e: Exception) {
                 // Handle any errors
                 e.printStackTrace()

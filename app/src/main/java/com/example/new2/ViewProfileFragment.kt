@@ -28,6 +28,12 @@ class ViewProfileFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_view_profile, container, false)
 
+        val backBtn = view.findViewById<Button>(R.id.backBtn)
+
+        backBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_viewProfileFragment_to_profileFragment)
+        }
+
         val userId = sharedPreferences.getString("userId", null)
 
         if (userId != null) {

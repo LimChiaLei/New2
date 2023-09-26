@@ -7,6 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -21,6 +25,8 @@ class HomeFragment : Fragment() {
     private lateinit var androidData: DataClass
     private lateinit var searchView: SearchView
 
+    //bottom
+    private lateinit var navController: NavController
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -58,29 +64,46 @@ class HomeFragment : Fragment() {
         adapter = MyAdapter(requireContext(), dataList)
         recyclerView.adapter = adapter
 
-        // Find the BottomNavigationView by its ID
-        val bottomNavigationView = rootView.findViewById<BottomNavigationView>(R.id.bottomNavView)
+        // Set up the BottomNavigationView
+        val bottomNavView = view?.findViewById<BottomNavigationView>(R.id.bottomNavView)
+        if (bottomNavView != null) {
+            bottomNavView.selectedItemId = R.id.home
+        }
 
-        // Set up navigation for the BottomNavigationView
-        bottomNavigationView.setOnNavigationItemSelectedListener { menuItem ->
-            when (menuItem.itemId) {
-                R.id.workoutFragment -> {
-                    findNavController().navigate(R.id.action_homeFragment_to_workoutFragment)
+        return rootView
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Initialize the NavController
+        navController = requireActivity().findNavController(R.id.nav_host_fragment)
+
+        // Set up the BottomNavigationView
+        val bottomNavView = view.findViewById<BottomNavigationView>(R.id.bottomNavView)
+        bottomNavView.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.home -> {
                     true
                 }
-                R.id.chartFragment -> {
-                    findNavController().navigate(R.id.action_homeFragment_to_chartFragment)
+                R.id.workout -> {
+                    // Navigate to WorkoutFragment
+                    navController.navigate(R.id.workoutFragment)
                     true
                 }
-                R.id.profileFragment -> {
-                    findNavController().navigate(R.id.action_homeFragment_to_profileFragment)
+                R.id.chart -> {
+                    // Navigate to ChartFragment
+                    navController.navigate(R.id.chartFragment)
+                    true
+                }
+                R.id.profile -> {
+                    // Navigate to ProfileFragment
+                    navController.navigate(R.id.profileFragment)
                     true
                 }
                 else -> false
             }
         }
-
-        return rootView
     }
 
     private fun searchList(text: String?) {

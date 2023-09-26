@@ -26,10 +26,18 @@ class DetailFragment : Fragment() {
 
         val bundle = arguments
         if (bundle != null) {
-            detailDesc.text = bundle.getString("Desc") // Retrieve it as a String
-            detailImage.setImageResource(bundle.getInt("Image"))
-            detailTitle.text = bundle.getString("Title")
+//            detailDesc.text = bundle.getString("Desc") // Retrieve it as a String
+//            detailImage.setImageResource(bundle.getInt("Image"))
+//            detailTitle.text = bundle.getString("Title")
+            val imageResId = bundle.getInt("Image")
+            val title = bundle.getString("Title")
+            val description = bundle.getString("Desc")
+
+            detailDesc.text = description.toString()
+            detailImage.setImageResource(imageResId)
+            detailTitle.text = title
         }
+
 
         return rootView
     }

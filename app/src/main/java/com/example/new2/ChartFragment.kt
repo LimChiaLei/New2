@@ -8,6 +8,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class ChartFragment : Fragment() {
 
@@ -16,6 +19,7 @@ class ChartFragment : Fragment() {
         requireContext().getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
     }
 
+    private lateinit var navController: NavController
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,12 +30,44 @@ class ChartFragment : Fragment() {
         // Retrieve the user's ID from SharedPreferences
         val userId = sharedPreferences.getString("userId", null)
 
-        // Find the TextView by its ID
-        val testText = view.findViewById<TextView>(R.id.testtext)
-
-        // Set the user ID as the text of the TextView
-        testText.text = userId ?: "User ID not found" // Show a default message if the ID is null
+        // Set up the BottomNavigationView
+        val bottomNavView = view?.findViewById<BottomNavigationView>(R.id.bottomNavView)
+        if (bottomNavView != null) {
+            bottomNavView.selectedItemId = R.id.chart
+        }
 
         return view
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Initialize the NavController
+        navController = requireActivity().findNavController(R.id.nav_host_fragment)
+
+        // Set up the BottomNavigationView
+        val bottomNavView = view.findViewById<BottomNavigationView>(R.id.bottomNavView)
+        bottomNavView.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.home -> {
+                    // Navigate to HomeFragment
+                    navController.navigate(R.id.homeFragment)
+                    true
+                }
+                R.id.workout -> {
+                    // Navigate to WorkoutFragment
+                    navController.navigate(R.id.workoutFragment)
+                    true
+                }
+                R.id.chart -> {
+                    true
+                }
+                R.id.profile -> {
+                    // Navigate to ProfileFragment
+                    navController.navigate(R.id.profileFragment)
+                    true
+                }
+                else -> false
+            }
+        }
     }
 }

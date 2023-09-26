@@ -31,14 +31,14 @@ class MyAdapter(private val context: Context, private var dataList: List<DataCla
         holder.recDesc.text = data.dataDesc // Remove .toString()
         holder.recLang.text = data.dataLang
 
-//        holder.recCard.setOnClickListener {
-//            val intent = Intent(context, DetailActivity::class.java)
-//            intent.putExtra("Image", data.dataImage)
-//            intent.putExtra("Title", data.dataTitle)
-//            intent.putExtra("Desc", data.dataDesc)
-//
-//            context.startActivity(intent)
-//        }
+        holder.recCard.setOnClickListener {
+            val intent = Intent(context, DetailFragment::class.java)
+            intent.putExtra("Image", data.dataImage)
+            intent.putExtra("Title", data.dataTitle)
+            intent.putExtra("Desc", data.dataDesc)
+
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {

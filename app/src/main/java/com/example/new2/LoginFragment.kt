@@ -65,7 +65,7 @@ class LoginFragment : Fragment() {
                                 saveUserId(userId)
                                 Log.d("LoginFragment", "User ID saved: $userId")
                                 // User exists with the provided username and password, navigate to the home fragment
-                                findNavController().navigate(R.id.action_loginFragment_to_workoutFragment)
+                                findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
                             } else {
                                 // Handle the case where the "userId" field is not found in the document
                                 Toast.makeText(
