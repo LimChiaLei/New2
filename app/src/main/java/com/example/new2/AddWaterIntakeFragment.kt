@@ -71,7 +71,7 @@ class AddWaterIntakeFragment : Fragment() {
 
 
         // Find the "drinked" button by its ID
-        val drinkedButton = view.findViewById<Button>(R.id.drinkedBtn)
+        val drinkedButton = view.findViewById<Button>(R.id.AddRecordBtn)
 
         // Set up a click listener for the "drinked" button
         drinkedButton.setOnClickListener {

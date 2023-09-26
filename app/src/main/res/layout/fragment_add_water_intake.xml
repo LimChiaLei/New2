@@ -48,10 +48,10 @@
                     android:src="@drawable/cup0"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/waterInTxt" />
+                    app:layout_constraintTop_toBottomOf="@+id/PhysicalActTxt" />
 
                 <TextView
-                    android:id="@+id/waterInTxt"
+                    android:id="@+id/PhysicalActTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
@@ -115,7 +115,7 @@
 
 
                 <Button
-                    android:id="@+id/drinkedBtn"
+                    android:id="@+id/AddRecordBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/form_btn"

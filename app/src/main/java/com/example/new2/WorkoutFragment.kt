@@ -19,16 +19,32 @@ class WorkoutFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_workout, container, false)
 
-        // Find the waterIntakImg by its ID
+        // Find the physicalActivity by its ID
+        val physicalActivityImage = view.findViewById<ImageView>(R.id.physicalActivityImage)
+        val physicalActivityName = view.findViewById<TextView>(R.id.physicalActivityName)
+        val physicalActivityCard = view.findViewById<RelativeLayout>(R.id.physicalActivityCard)
+
+        // Find the waterIntake by its ID
         val waterIntakeImg = view.findViewById<ImageView>(R.id.waterIntakeImage)
         val waterIntakeName = view.findViewById<TextView>(R.id.waterIntakeName)
         val waterIntakeCard = view.findViewById<RelativeLayout>(R.id.waterIntakeCard)
+
+        // Set click listeners for the physicalActivity components
+        physicalActivityImage.setOnClickListener {
+            findNavController().navigate(R.id.action_workoutFragment_to_physicalActivityListFragment)
+        }
+        physicalActivityName.setOnClickListener {
+            findNavController().navigate(R.id.action_workoutFragment_to_physicalActivityListFragment)
+        }
+        physicalActivityCard.setOnClickListener {
+            findNavController().navigate(R.id.action_workoutFragment_to_physicalActivityListFragment)
+        }
 
         // Set a click listener for the waterIntakeLayout
         waterIntakeImg.setOnClickListener {
             findNavController().navigate(R.id.action_workoutFragment_to_waterIntakeListFragment)
         }
-        waterIntakeImg.setOnClickListener {
+        waterIntakeName.setOnClickListener {
             findNavController().navigate(R.id.action_workoutFragment_to_waterIntakeListFragment)
         }
         waterIntakeCard.setOnClickListener {

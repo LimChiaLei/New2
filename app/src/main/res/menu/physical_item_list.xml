@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/op1"
+        android:title="Running"/>
+    <item
+        android:id="@+id/op2"
+        android:title="Walking"/>
+    <item
+        android:id="@+id/op3"
+        android:title="Cycling"/>
+    <item
+        android:id="@+id/op4"
+        android:title="Swimming"/>
+    <item
+        android:id="@+id/op5"
+        android:title="Sport"/>
+    <item
+        android:id="@+id/op6"
+        android:title="Yoga"/>
+    <item
+        android:id="@+id/op7"
+        android:title="Gym"/>
+</menu>

@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_loginFragment_to_chartFragment"
             app:destination="@id/chartFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_physicalActivityListFragment"
+            app:destination="@id/physicalActivityListFragment" />
     </fragment>
     <fragment
         android:id="@+id/chartFragment"
@@ -103,6 +106,9 @@
         <action
             android:id="@+id/action_workoutFragment_to_waterIntakeListFragment"
             app:destination="@id/waterIntakeListFragment" />
+        <action
+            android:id="@+id/action_workoutFragment_to_physicalActivityListFragment"
+            app:destination="@id/physicalActivityListFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
@@ -150,5 +156,38 @@
         <action
             android:id="@+id/action_addWaterIntakeFragment_to_waterIntakeListFragment"
             app:destination="@id/waterIntakeListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/physicalActivityListFragment"
+        android:name="com.example.new2.PhysicalActivityListFragment"
+        android:label="fragment_physical_activity_list"
+        tools:layout="@layout/fragment_physical_activity_list" >
+        <action
+            android:id="@+id/action_physicalActivityListFragment_to_addPhysicalActivityFragment"
+            app:destination="@id/addPhysicalActivityFragment" />
+        <action
+            android:id="@+id/action_physicalActivityListFragment_to_workoutFragment"
+            app:destination="@id/workoutFragment" />
+        <action
+            android:id="@+id/action_physicalActivityListFragment_to_editPhysicalActivityFragment"
+            app:destination="@id/editPhysicalActivityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPhysicalActivityFragment"
+        android:name="com.example.new2.AddPhysicalActivityFragment"
+        android:label="fragment_add_physical_activity"
+        tools:layout="@layout/fragment_add_physical_activity" >
+        <action
+            android:id="@+id/action_addPhysicalActivityFragment_to_physicalActivityListFragment"
+            app:destination="@id/physicalActivityListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editPhysicalActivityFragment"
+        android:name="com.example.new2.EditPhysicalActivityFragment"
+        android:label="fragment_edit_physical_activity"
+        tools:layout="@layout/fragment_edit_physical_activity" >
+        <action
+            android:id="@+id/action_editPhysicalActivityFragment_to_physicalActivityListFragment"
+            app:destination="@id/physicalActivityListFragment" />
     </fragment>
 </navigation>
