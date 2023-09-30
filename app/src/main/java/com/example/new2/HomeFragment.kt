@@ -7,22 +7,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.new2.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import java.util.Locale
 
 class HomeFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
-    private lateinit var dataList: MutableList<DataClass>
+    private lateinit var dataList: MutableList<PlanDataClass>
     private lateinit var adapter: MyAdapter
-    private lateinit var androidData: DataClass
+    private lateinit var androidData: PlanDataClass
     private lateinit var searchView: SearchView
 
     //bottom
@@ -31,46 +27,85 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val rootView = inflater.inflate(R.layout.fragment_home, container, false)
+        val view = inflater.inflate(R.layout.fragment_home, container, false)
 
-        recyclerView = rootView.findViewById(R.id.recyclerView)
-        searchView = rootView.findViewById(R.id.search)
-
+        recyclerView = view.findViewById(R.id.recyclerView)
+        searchView = view.findViewById(R.id.search)
+        //-----------Search------------------
         searchView.clearFocus()
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 return false
             }
-
             override fun onQueryTextChange(newText: String?): Boolean {
                 searchList(newText)
                 return true
             }
         })
-
+        //-----------Search------------------
         val gridLayoutManager = GridLayoutManager(requireContext(), 1)
         recyclerView.layoutManager = gridLayoutManager
         dataList = mutableListOf()
 
-        androidData = DataClass("Keep Fit", getString(R.string.keep_fit_plan), "", R.drawable.workout_plan)
+        androidData = PlanDataClass("Keep Fit", getString(R.string.keep_fit_plan), getString(R.string.meal_plan), R.drawable.meal_plan)
         dataList.add(androidData)
 
-        androidData = DataClass("7-Day Weight Loss Meal Plan", getString(R.string.weight_loss_plan), "", R.drawable.weightloss_plan)
+        androidData = PlanDataClass("7-Day Weight Loss Meal Plan", getString(R.string.weight_loss_plan), getString(R.string.meal_plan), R.drawable.meal_plan)
         dataList.add(androidData)
 
-        androidData = DataClass("High-Protein Meal Plan for Muscle Building", getString(R.string.muscle_building_plan), "", R.drawable.meal_plan)
+        androidData = PlanDataClass("High-Protein Meal Plan for Muscle Building", getString(R.string.muscle_building_plan), getString(R.string.meal_plan), R.drawable.meal_plan)
         dataList.add(androidData)
 
         adapter = MyAdapter(requireContext(), dataList)
         recyclerView.adapter = adapter
 
-        // Set up the BottomNavigationView
+
+
+        // Initialize dataList here before using it
+//        dataList = mutableListOf()
+        //------------Plan------------------
+
+
+
+//        val dbHelper = PlanDatabaseHelper(requireContext())
+//        val planIds = listOf(1, 2, 3)
+//        for (planId in planIds) {
+//            val retrievedPlan = dbHelper.getPlanById(planId.toLong())
+//            if (retrievedPlan != null) {
+//                val androidData = PlanDataClass(
+//                    planId.toLong(), // Convert planId to Long
+//                    retrievedPlan.title,
+//                    retrievedPlan.type,
+//                    retrievedPlan.content,
+//                    retrievedPlan.img
+//                )
+//                dataList.add(androidData)
+//            }
+//        }
+
+
+        //------------Plan------------------
+
+
+//        searchView = rootView.findViewById(R.id.search)
+//        dataList = mutableListOf()
+//
+//        recyclerView = rootView.findViewById(R.id.recyclerView)
+//        val gridLayoutManager = GridLayoutManager(requireContext(), 1)
+//        recyclerView.layoutManager = gridLayoutManager
+//
+//        // Retrieve data from the database and pass it to the adapter
+//        val planList = retrieveDataFromDatabase()
+//        adapter = MyAdapter(planList)
+//        recyclerView.adapter = adapter
+
+        //-------------------------BottomNavigationView---------------------------------
         val bottomNavView = view?.findViewById<BottomNavigationView>(R.id.bottomNavView)
         if (bottomNavView != null) {
             bottomNavView.selectedItemId = R.id.home
         }
-
-        return rootView
+        //-------------------------BottomNavigationView---------------------------------
+        return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -107,9 +142,9 @@ class HomeFragment : Fragment() {
     }
 
     private fun searchList(text: String?) {
-        val dataSearchList = mutableListOf<DataClass>()
+        val dataSearchList = mutableListOf<PlanDataClass>()
         for (data in dataList) {
-            if (data.dataTitle.toLowerCase(Locale.ROOT).contains(text?.toLowerCase(Locale.ROOT) ?: "")) {
+            if (data.title.toLowerCase(Locale.ROOT).contains(text?.toLowerCase(Locale.ROOT) ?: "")) {
                 dataSearchList.add(data)
             }
         }
@@ -119,5 +154,14 @@ class HomeFragment : Fragment() {
             adapter.setSearchList(dataSearchList)
         }
     }
+
+    // Function to retrieve data from the database
+//    private fun retrieveDataFromDatabase(): List<PlanDataClass> {
+//        val dbHelper = PlanDatabaseHelper(requireContext())
+//        // Assuming you have a function in your PlanDatabaseHelper to fetch all plans,
+//        // you can use it to retrieve the data and return it as a list.
+//        val planList: List<PlanDataClass> = dbHelper.getAllPlans()
+//        return planList
+//    }
 }
 

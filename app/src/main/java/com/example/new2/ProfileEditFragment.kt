@@ -12,7 +12,7 @@ import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.firestore.FirebaseFirestore
 
-class EditProfileFragment : Fragment() {
+class ProfileEditFragment : Fragment() {
 
     // Retrieve the user's ID from SharedPreferences
     private val sharedPreferences: SharedPreferences by lazy {
@@ -72,7 +72,7 @@ class EditProfileFragment : Fragment() {
                             val document = documents.documents[0]
                             document.reference.update(userData)
                                 .addOnSuccessListener {
-                                    // Redirect back to the ViewProfileFragment
+                                    // Redirect back to the ProfileViewFragment
                                     requireActivity().supportFragmentManager.popBackStack()
                                     Toast.makeText(requireContext(), "Profile updated successfully", Toast.LENGTH_SHORT).show()
                                 }

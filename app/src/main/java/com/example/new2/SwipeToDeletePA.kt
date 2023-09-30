@@ -37,7 +37,7 @@ class SwipeToDeletePA(
             val bundle = Bundle()
             bundle.putSerializable("physicalActivity", physicalActivity)
 
-            // Navigate to the EditPhysicalActivityFragment with data
+            // Navigate to the PhysicalActivityEditFragment with data
             fragment.findNavController().navigate(R.id.action_physicalActivityListFragment_to_editPhysicalActivityFragment, bundle)
         } else if (direction == ItemTouchHelper.LEFT) {
             // Handle left swipe for deletion

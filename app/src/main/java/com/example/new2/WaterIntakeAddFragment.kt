@@ -19,7 +19,7 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
-class AddWaterIntakeFragment : Fragment() {
+class WaterIntakeAddFragment : Fragment() {
 
     private lateinit var seekBar: SeekBar
     private lateinit var valueTextView: TextView

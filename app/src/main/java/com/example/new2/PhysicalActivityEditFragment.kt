@@ -1,6 +1,5 @@
 package com.example.new2
 
-import android.app.AlertDialog
 import android.content.ContentValues.TAG
 import android.os.Bundle
 import android.util.Log
@@ -9,7 +8,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.EditText
 import android.widget.ImageView
 import android.widget.PopupMenu
 import android.widget.TextView
@@ -21,7 +19,7 @@ import java.util.Date
 import java.util.Locale
 
 
-class EditPhysicalActivityFragment : Fragment() {
+class PhysicalActivityEditFragment : Fragment() {
     private val firestore = FirebaseFirestore.getInstance()
 
     override fun onCreateView(

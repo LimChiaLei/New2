@@ -56,7 +56,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/meal_plan_desc"
                         android:textSize="18sp"
-                        android:id="@+id/recDesc"
+                        android:id="@+id/recCont"
                         android:maxLines="0"/>
 
                 </LinearLayout>
@@ -73,7 +73,7 @@
                         android:textColor="@color/blue2"
                         android:textSize="18sp"
                         android:textAlignment="center"
-                        android:id="@+id/recLang"/>
+                        android:id="@+id/recType"/>
 
                 </LinearLayout>
             </LinearLayout>

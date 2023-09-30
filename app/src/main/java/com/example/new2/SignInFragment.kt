@@ -108,6 +108,16 @@ class SignInFragment : Fragment() {
             findNavController().navigate(R.id.action_signInFragment_to_loginFragment)
         }
 
+//        // Instantiate your database helper class
+//        val dbHelper  = StepCountDatabaseHelper(requireContext())
+//
+//        // Call the insertStepCount function to insert a new record
+//        dbHelper.insertStepCount(1000, "2023-09-30", "1001")
+//
+//        // Close the database connection when you're done with it
+//        dbHelper.close()
+
+
         return rootView
     }
 

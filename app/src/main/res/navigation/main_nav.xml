@@ -79,6 +79,9 @@
         <action
             android:id="@+id/action_profileFragment_to_viewProfileFragment"
             app:destination="@id/viewProfileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_stepCountRecordFragment"
+            app:destination="@id/stepCountRecordFragment" />
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
@@ -114,10 +117,14 @@
         android:id="@+id/detailFragment"
         android:name="com.example.new2.DetailFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail" >
+        <action
+            android:id="@+id/action_detailFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/viewProfileFragment"
-        android:name="com.example.new2.ViewProfileFragment"
+        android:name="com.example.new2.ProfileViewFragment"
         android:label="fragment_view_profile"
         tools:layout="@layout/fragment_view_profile">
         <action
@@ -129,7 +136,7 @@
     </fragment>
     <fragment
         android:id="@+id/editProfileFragment"
-        android:name="com.example.new2.EditProfileFragment"
+        android:name="com.example.new2.ProfileEditFragment"
         android:label="fragment_edit_profile"
         tools:layout="@layout/fragment_edit_profile" >
         <action
@@ -150,7 +157,7 @@
     </fragment>
     <fragment
         android:id="@+id/addWaterIntakeFragment"
-        android:name="com.example.new2.AddWaterIntakeFragment"
+        android:name="com.example.new2.WaterIntakeAddFragment"
         android:label="fragment_add_water_intake"
         tools:layout="@layout/fragment_add_water_intake" >
         <action
@@ -174,7 +181,7 @@
     </fragment>
     <fragment
         android:id="@+id/addPhysicalActivityFragment"
-        android:name="com.example.new2.AddPhysicalActivityFragment"
+        android:name="com.example.new2.PhysicalActivityAddFragment"
         android:label="fragment_add_physical_activity"
         tools:layout="@layout/fragment_add_physical_activity" >
         <action
@@ -183,11 +190,20 @@
     </fragment>
     <fragment
         android:id="@+id/editPhysicalActivityFragment"
-        android:name="com.example.new2.EditPhysicalActivityFragment"
+        android:name="com.example.new2.PhysicalActivityEditFragment"
         android:label="fragment_edit_physical_activity"
         tools:layout="@layout/fragment_edit_physical_activity" >
         <action
             android:id="@+id/action_editPhysicalActivityFragment_to_physicalActivityListFragment"
             app:destination="@id/physicalActivityListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stepCountRecordFragment"
+        android:name="com.example.new2.StepCountRecordFragment"
+        android:label="fragment_step_count_record"
+        tools:layout="@layout/fragment_step_count_record" >
+        <action
+            android:id="@+id/action_stepCountRecordFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
     </fragment>
 </navigation>

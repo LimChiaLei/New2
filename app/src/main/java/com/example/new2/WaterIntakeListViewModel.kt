@@ -30,4 +30,26 @@ class WaterIntakeListViewModel : ViewModel() {
             }
         }
     }
+
+    // List to hold water intake records
+    var waterIntakeRecords = mutableListOf<WaterIntakeRecord>()
+
+    // Function to update or add a water intake record
+    fun updateWaterIntakeRecord(record: WaterIntakeRecord) {
+//        // Check if the record already exists in the list
+//        val existingRecord = waterIntakeRecords.find { it.userId == record.userId && it.currentDate == record.currentDate && it.currentTime == record.currentTime }
+//
+//        if (existingRecord != null) {
+//            // Update the existing record
+//            existingRecord.waterIntake = record.waterIntake
+//        } else {
+//            // Add the new record to the list
+//            waterIntakeRecords.add(record)
+//        }
+    }
+
+    // Function to delete a water intake record
+    fun deleteWaterIntakeRecord(record: WaterIntakeRecord) {
+        //waterIntakeRecords.remove(record)
+    }
 }

@@ -82,7 +82,7 @@
         •Choose lean sources of protein, such as poultry, fish, tofu, beans, and legumes.\n
         •Opt for whole grains over refined grains for added fiber and nutrients.\n
         •Incorporate a variety of fruits and vegetables to ensure you get a wide range of vitamins
-        and minerals.
+        and minerals.\n\n\n
     </string>
 
     <string name="weight_loss_plan">
@@ -141,7 +141,7 @@
         Remember to stay hydrated throughout the day by drinking plenty of water or herbal tea. This
         meal plan emphasizes whole foods, lean protein sources, fruits, vegetables, and whole grains,
         which can support a balanced and healthy approach to weight loss. Adjust portion sizes to fit
-        your specific calorie needs and dietary preferences.
+        your specific calorie needs and dietary preferences.\n\n\n
     </string>
 
     <string name="muscle_building_plan">
@@ -202,7 +202,7 @@
         is essential for muscle recovery and overall health. This meal plan emphasizes lean protein
         sources such as chicken, fish, lean beef, and dairy products to support muscle growth and repair.
         Adjust portion sizes and total daily protein intake as needed based on your specific dietary
-        requirements and fitness goals.
+        requirements and fitness goals.\n\n\n
     </string>
 
     <!-- add record -->

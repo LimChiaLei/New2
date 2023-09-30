@@ -4,5 +4,5 @@ data class WaterIntakeRecord(
     val userId: String,
     val currentDate: String,
     val currentTime: String,
-    val waterIntake: Int
+    var waterIntake: Int
 )

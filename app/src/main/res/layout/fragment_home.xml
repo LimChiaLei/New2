@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_2"
-    tools:context=".MainActivity">
+    android:background="@drawable/bg_5"
+    tools:context=".HomeFragment">
     <fragment
         android:id="@+id/nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
@@ -37,6 +37,10 @@
         android:scrollbars="vertical"
         android:layout_marginBottom="60dp"
         android:layout_below="@id/search"/>
+    <FrameLayout
+        android:id="@+id/detailFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
@@ -54,4 +58,5 @@
         app:itemIconTint="@drawable/item_slt"
         app:itemRippleColor="@android:color/transparent"
         app:labelVisibilityMode="unlabeled"/>
+
 </RelativeLayout>

@@ -8,14 +8,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.google.firebase.firestore.FirebaseFirestore
 
-class ViewProfileFragment : Fragment() {
+class ProfileViewFragment : Fragment() {
 
     private val sharedPreferences: SharedPreferences by lazy {
         requireContext().getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
@@ -65,7 +64,7 @@ class ViewProfileFragment : Fragment() {
                 }
                 .addOnFailureListener { exception ->
                     // Handle errors here, you can log or display a message to the user
-                    Log.e("ViewProfileFragment", "Error getting user data", exception)
+                    Log.e("ProfileViewFragment", "Error getting user data", exception)
                     Toast.makeText(requireContext(), "Failed to retrieve user data", Toast.LENGTH_SHORT).show()
                 }
         }
@@ -74,9 +73,9 @@ class ViewProfileFragment : Fragment() {
         // Find the Button by its ID
         val editProfileBtn = view.findViewById<Button>(R.id.editButton)
 
-        // Set an OnClickListener to navigate to ViewProfileFragment
+        // Set an OnClickListener to navigate to ProfileViewFragment
         editProfileBtn.setOnClickListener {
-            // Navigate to the ViewProfileFragment
+            // Navigate to the ProfileViewFragment
             findNavController().navigate(R.id.action_viewProfileFragment_to_editProfileFragment)
         }
 

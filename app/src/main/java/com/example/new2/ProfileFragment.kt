@@ -12,6 +12,8 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
@@ -61,17 +63,39 @@ class ProfileFragment : Fragment() {
                 }
                 .addOnFailureListener { exception ->
                     // Handle errors here, you can log or display a message to the user
-                    Log.e("ViewProfileFragment", "Error getting user data", exception)
+                    Log.e("ProfileViewFragment", "Error getting user data", exception)
                     Toast.makeText(requireContext(), "Failed to retrieve user data", Toast.LENGTH_SHORT).show()
                 }
         }
 
         // Find the ImgView by its ID
         val profilePicImageView = view.findViewById<ImageView>(R.id.profilePic)
+        val chartFeild = view.findViewById<View>(R.id.chartFeild)
+        val chartIcon = view.findViewById<View>(R.id.chartIcon)
+        val right2 = view.findViewById<View>(R.id.right2)
 
-        // Set an OnClickListener to navigate to ViewProfileFragment
+        // Set an OnClickListener for the chartFeild
+        chartFeild.setOnClickListener {
+            // Replace the current fragment with the target fragment
+            findNavController().navigate(R.id.action_profileFragment_to_stepCountRecordFragment)
+        }
+
+        // Set an OnClickListener for the chartIcon (if needed)
+        chartIcon.setOnClickListener {
+            // Replace the current fragment with the target fragment
+            findNavController().navigate(R.id.action_profileFragment_to_stepCountRecordFragment)
+        }
+
+        // Set an OnClickListener for the right2 (if needed)
+        right2.setOnClickListener {
+            // Replace the current fragment with the target fragment
+            findNavController().navigate(R.id.action_profileFragment_to_stepCountRecordFragment)
+        }
+
+
+        // Set an OnClickListener to navigate to ProfileViewFragment
         profilePicImageView.setOnClickListener {
-            // Navigate to the ViewProfileFragment
+            // Navigate to the ProfileViewFragment
             findNavController().navigate(R.id.action_profileFragment_to_viewProfileFragment)
         }
 

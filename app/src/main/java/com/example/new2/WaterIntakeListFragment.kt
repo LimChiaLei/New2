@@ -8,9 +8,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.Dispatchers
@@ -19,6 +21,7 @@ import kotlinx.coroutines.tasks.await
 
 class WaterIntakeListFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
+    private lateinit var viewModel: WaterIntakeListViewModel
     private lateinit var adapter: WaterIntakeAdapter
 
     // Retrieve the user's ID from SharedPreferences
@@ -91,6 +94,43 @@ class WaterIntakeListFragment : Fragment() {
         addWaterInBtn.setOnClickListener {
             findNavController().navigate(R.id.action_waterIntakeListFragment_to_addWaterIntakeFragment)
         }
+
+        // Initialize ViewModel
+        viewModel = ViewModelProvider(this).get(WaterIntakeListViewModel::class.java)
+
+        // Initialize RecyclerView and Adapter
+        val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view)
+        adapter = WaterIntakeAdapter(viewModel.waterIntakeRecords)
+        recyclerView.adapter = adapter
+
+        // Implement swipe-to-delete using ItemTouchHelper
+        val itemTouchHelper = ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(
+            0, ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT
+        ) {
+            override fun onMove(
+                recyclerView: RecyclerView,
+                viewHolder: RecyclerView.ViewHolder,
+                target: RecyclerView.ViewHolder
+            ): Boolean {
+                return false
+            }
+
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+                // Get the swiped record
+                val swipedRecord = viewModel.waterIntakeRecords[viewHolder.adapterPosition]
+
+                // Delete the record from ViewModel and RecyclerView
+                viewModel.deleteWaterIntakeRecord(swipedRecord)
+                adapter.notifyDataSetChanged()
+            }
+        })
+
+        itemTouchHelper.attachToRecyclerView(recyclerView)
+
+        // Example of how to update a record (you can call this when needed)
+        val updatedRecord = WaterIntakeRecord("userId", "date", "time", 180)
+        viewModel.updateWaterIntakeRecord(updatedRecord)
+        adapter.notifyDataSetChanged()
 
         return view
     }
