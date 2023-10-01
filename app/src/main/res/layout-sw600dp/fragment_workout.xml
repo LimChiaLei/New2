@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -18,13 +17,13 @@
         <TextView
             android:id="@+id/Record"
             android:layout_width="0dp"
-            android:layout_height="42dp"
+            android:layout_height="70dp"
             android:layout_marginStart="18dp"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/aclonica"
             android:text="@string/add_record"
             android:textColor="@color/black"
-            android:textSize="36sp"
+            android:textSize="60sp"
             app:layout_constraintEnd_toStartOf="@+id/logo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -37,7 +36,7 @@
             android:fontFamily="@font/damion"
             android:text="@string/recordDescription1"
             android:textColor="@color/black"
-            android:textSize="14sp"
+            android:textSize="40sp"
             app:layout_constraintEnd_toStartOf="@+id/logo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/Record" />
@@ -47,19 +46,19 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="60dp"
             android:fontFamily="@font/damion"
             android:text="@string/recordDescription2"
             android:textColor="@color/black"
-            android:textSize="14sp"
+            android:textSize="40sp"
             app:layout_constraintEnd_toStartOf="@+id/logo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/Record" />
 
         <ImageView
             android:id="@+id/logo"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:layout_marginEnd="40dp"
             android:src="@drawable/login_logo"
             app:layout_constraintEnd_toEndOf="parent"
@@ -69,7 +68,7 @@
         <LinearLayout
             android:id="@+id/row1"
             android:layout_width="0dp"
-            android:layout_height="175dp"
+            android:layout_height="400dp"
             android:layout_marginTop="10dp"
 
             android:orientation="horizontal"
@@ -102,12 +101,12 @@
                         android:fontFamily="@font/aclonica"
                         android:text="@string/fitnessGoals"
                         android:textColor="@color/blue1"
-                        android:textSize="20sp" />
+                        android:textSize="40sp" />
 
                     <ImageView
                         android:id="@+id/fitnessGoalsImage"
-                        android:layout_width="100dp"
-                        android:layout_height="70dp"
+                        android:layout_width="260dp"
+                        android:layout_height="260dp"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="15dp"
                         android:src="@drawable/ar_fitness_goals" />
@@ -138,12 +137,12 @@
                         android:fontFamily="@font/aclonica"
                         android:text="@string/physicalActivity"
                         android:textColor="@color/blue1"
-                        android:textSize="17sp" />
+                        android:textSize="40sp" />
 
                     <ImageView
                         android:id="@+id/physicalActivityImage"
-                        android:layout_width="100dp"
-                        android:layout_height="70dp"
+                        android:layout_width="260dp"
+                        android:layout_height="260dp"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="15dp"
                         android:src="@drawable/ar_physical_activity" />
@@ -155,7 +154,7 @@
         <LinearLayout
             android:id="@+id/row2"
             android:layout_width="0dp"
-            android:layout_height="175dp"
+            android:layout_height="400dp"
 
             android:orientation="horizontal"
             android:padding="10dp"
@@ -186,12 +185,12 @@
                         android:fontFamily="@font/aclonica"
                         android:text="@string/weight_body"
                         android:textColor="@color/blue1"
-                        android:textSize="20sp" />
+                        android:textSize="40sp" />
 
                     <ImageView
                         android:id="@+id/weight_bodyImage"
-                        android:layout_width="100dp"
-                        android:layout_height="70dp"
+                        android:layout_width="260dp"
+                        android:layout_height="260dp"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="15dp"
                         android:src="@drawable/ar_weight_body" />
@@ -222,12 +221,12 @@
                         android:fontFamily="@font/aclonica"
                         android:text="@string/waterIntake"
                         android:textColor="@color/blue1"
-                        android:textSize="20sp" />
+                        android:textSize="40sp" />
 
                     <ImageView
                         android:id="@+id/waterIntakeImage"
-                        android:layout_width="100dp"
-                        android:layout_height="70dp"
+                        android:layout_width="260dp"
+                        android:layout_height="260dp"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="15dp"
                         android:src="@drawable/ar_water_intake" />
@@ -239,7 +238,7 @@
         <LinearLayout
             android:id="@+id/row3"
             android:layout_width="0dp"
-            android:layout_height="175dp"
+            android:layout_height="400dp"
 
             android:orientation="horizontal"
             android:padding="10dp"
@@ -270,12 +269,12 @@
                         android:fontFamily="@font/aclonica"
                         android:text="@string/caloriesBurned"
                         android:textColor="@color/blue1"
-                        android:textSize="17sp" />
+                        android:textSize="40sp" />
 
                     <ImageView
                         android:id="@+id/caloriesBurnedImage"
-                        android:layout_width="100dp"
-                        android:layout_height="70dp"
+                        android:layout_width="260dp"
+                        android:layout_height="260dp"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="15dp"
                         android:src="@drawable/ar_calories_burned" />
@@ -305,12 +304,12 @@
                         android:fontFamily="@font/aclonica"
                         android:text="@string/dietaryIntake"
                         android:textColor="@color/blue1"
-                        android:textSize="20sp" />
+                        android:textSize="40sp" />
 
                     <ImageView
                         android:id="@+id/dietaryIntakeImage"
-                        android:layout_width="100dp"
-                        android:layout_height="70dp"
+                        android:layout_width="260dp"
+                        android:layout_height="260dp"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="15dp"
                         android:src="@drawable/ar_dietary_intake" />
@@ -321,8 +320,8 @@
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavView"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="8dp"
             android:layout_marginTop="50dp"
@@ -340,86 +339,86 @@
             app:layout_constraintTop_toBottomOf="@+id/row3"
             app:menu="@menu/bottom_menu" />
 
-<!--        <LinearLayout-->
-<!--            android:id="@+id/row4"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="175dp"-->
-<!--            android:background="@drawable/bg_3"-->
-<!--            android:orientation="horizontal"-->
-<!--            android:padding="10dp"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.0"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/row3">-->
+        <!--        <LinearLayout-->
+        <!--            android:id="@+id/row4"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="175dp"-->
+        <!--            android:background="@drawable/bg_3"-->
+        <!--            android:orientation="horizontal"-->
+        <!--            android:padding="10dp"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintHorizontal_bias="0.0"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/row3">-->
 
-<!--&lt;!&ndash;            <androidx.cardview.widget.CardView&ndash;&gt;-->
-<!--&lt;!&ndash;                android:layout_width="0dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                android:layout_height="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;                android:layout_margin="10dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                android:layout_weight="1"&ndash;&gt;-->
-<!--&lt;!&ndash;                app:cardCornerRadius="20dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                app:cardElevation="20dp">&ndash;&gt;-->
+        <!--&lt;!&ndash;            <androidx.cardview.widget.CardView&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_width="0dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_height="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_margin="10dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_weight="1"&ndash;&gt;-->
+        <!--&lt;!&ndash;                app:cardCornerRadius="20dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                app:cardElevation="20dp">&ndash;&gt;-->
 
-<!--&lt;!&ndash;                <RelativeLayout&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_height="match_parent">&ndash;&gt;-->
+        <!--&lt;!&ndash;                <RelativeLayout&ndash;&gt;-->
+        <!--&lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;                    android:layout_height="match_parent">&ndash;&gt;-->
 
-<!--&lt;!&ndash;                    <TextView&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:id="@+id/sleepPatternsNam"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_height="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_below="@+id/sleepPatternsImag"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_centerHorizontal="true"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_marginTop="10dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:text="@string/sleepPatterns"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:textColor="@color/blue1"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:textSize="20sp" />&ndash;&gt;-->
+        <!--&lt;!&ndash;                    <TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:id="@+id/sleepPatternsNam"&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:layout_below="@+id/sleepPatternsImag"&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:layout_centerHorizontal="true"&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:layout_marginTop="10dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:text="@string/sleepPatterns"&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:textColor="@color/blue1"&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:textSize="20sp" />&ndash;&gt;-->
 
-<!--&lt;!&ndash;                    <ImageView&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:id="@+id/sleepPatternsImag"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_width="100dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_height="70dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_centerHorizontal="true"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_marginTop="15dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:src="@drawable/ar_sleep_patterns" />&ndash;&gt;-->
+        <!--&lt;!&ndash;                    <ImageView&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:id="@+id/sleepPatternsImag"&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:layout_width="100dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:layout_height="70dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:layout_centerHorizontal="true"&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:layout_marginTop="15dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:src="@drawable/ar_sleep_patterns" />&ndash;&gt;-->
 
-<!--&lt;!&ndash;                </RelativeLayout>&ndash;&gt;-->
-<!--&lt;!&ndash;            </androidx.cardview.widget.CardView>&ndash;&gt;-->
+        <!--&lt;!&ndash;                </RelativeLayout>&ndash;&gt;-->
+        <!--&lt;!&ndash;            </androidx.cardview.widget.CardView>&ndash;&gt;-->
 
-<!--&lt;!&ndash;            <androidx.cardview.widget.CardView&ndash;&gt;-->
-<!--&lt;!&ndash;                android:layout_width="0dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                android:layout_height="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;                android:layout_margin="10dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                android:layout_weight="1"&ndash;&gt;-->
-<!--&lt;!&ndash;                app:cardCornerRadius="20dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                app:cardElevation="20dp">&ndash;&gt;-->
+        <!--&lt;!&ndash;            <androidx.cardview.widget.CardView&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_width="0dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_height="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_margin="10dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_weight="1"&ndash;&gt;-->
+        <!--&lt;!&ndash;                app:cardCornerRadius="20dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                app:cardElevation="20dp">&ndash;&gt;-->
 
-<!--&lt;!&ndash;                <RelativeLayout&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_height="match_parent">&ndash;&gt;-->
+        <!--&lt;!&ndash;                <RelativeLayout&ndash;&gt;-->
+        <!--&lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;                    android:layout_height="match_parent">&ndash;&gt;-->
 
-<!--&lt;!&ndash;                    <TextView&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:id="@+id/heartRate_bloodPressureName"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_height="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_below="@+id/heartRate_bloodPressureImage"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_centerHorizontal="true"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_marginTop="10dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:text="@string/heartRate_bloodPressure"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:textColor="@color/blue1"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:textSize="20sp" />&ndash;&gt;-->
+        <!--&lt;!&ndash;                    <TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:id="@+id/heartRate_bloodPressureName"&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:layout_below="@+id/heartRate_bloodPressureImage"&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:layout_centerHorizontal="true"&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:layout_marginTop="10dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:text="@string/heartRate_bloodPressure"&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:textColor="@color/blue1"&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:textSize="20sp" />&ndash;&gt;-->
 
-<!--&lt;!&ndash;                    <ImageView&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:id="@+id/heartRate_bloodPressureImage"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_width="100dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_height="70dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_centerHorizontal="true"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_marginTop="15dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:src="@drawable/ar_heart_rate_blood_pressure" />&ndash;&gt;-->
+        <!--&lt;!&ndash;                    <ImageView&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:id="@+id/heartRate_bloodPressureImage"&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:layout_width="100dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:layout_height="70dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:layout_centerHorizontal="true"&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:layout_marginTop="15dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:src="@drawable/ar_heart_rate_blood_pressure" />&ndash;&gt;-->
 
-<!--&lt;!&ndash;                </RelativeLayout>&ndash;&gt;-->
-<!--&lt;!&ndash;            </androidx.cardview.widget.CardView>&ndash;&gt;-->
-<!--        </LinearLayout>-->
+        <!--&lt;!&ndash;                </RelativeLayout>&ndash;&gt;-->
+        <!--&lt;!&ndash;            </androidx.cardview.widget.CardView>&ndash;&gt;-->
+        <!--        </LinearLayout>-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

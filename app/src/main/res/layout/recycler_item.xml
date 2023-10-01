@@ -43,21 +43,23 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/recTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/meal_plan"
-                        android:textSize="20sp"
+                        android:fontFamily="@font/aclonica"
                         android:maxLines="1"
+                        android:text="@string/meal_plan"
                         android:textColor="@color/blue2"
-                        android:id="@+id/recTitle"/>
+                        android:textSize="20sp" />
 
                     <TextView
+                        android:id="@+id/recCont"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/aclonica"
+                        android:maxLines="0"
                         android:text="@string/meal_plan_desc"
-                        android:textSize="18sp"
-                        android:id="@+id/recCont"
-                        android:maxLines="0"/>
+                        android:textSize="18sp" />
 
                 </LinearLayout>
 
@@ -68,12 +70,13 @@
                     android:gravity="center">
 
                     <TextView
+                        android:id="@+id/recType"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/blue2"
-                        android:textSize="18sp"
+                        android:fontFamily="@font/aclonica"
                         android:textAlignment="center"
-                        android:id="@+id/recType"/>
+                        android:textColor="@color/blue2"
+                        android:textSize="18sp" />
 
                 </LinearLayout>
             </LinearLayout>

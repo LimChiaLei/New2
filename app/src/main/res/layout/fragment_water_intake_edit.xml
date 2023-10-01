@@ -55,6 +55,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
+                    android:fontFamily="@font/aclonica"
                     android:text="Update Water Intake"
                     android:textSize="25sp"
                     app:layout_constraintEnd_toEndOf="parent"
