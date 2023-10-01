@@ -48,12 +48,11 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
-// Define a callback interface
 interface StepCountResetCallback {
     fun resetStepCountAndProgressBar()
 }
 
-private const val JOB_ID = 123 // You can choose any unique integer value
+private const val JOB_ID = 123
 
 class ChartFragment : Fragment(), SensorEventListener {
 
@@ -97,22 +96,21 @@ class ChartFragment : Fragment(), SensorEventListener {
         mSensorManager = requireContext().getSystemService(Context.SENSOR_SERVICE) as SensorManager
         stepSensor = mSensorManager?.getDefaultSensor(Sensor.TYPE_STEP_COUNTER)
 
-        resetSteps() // Call the resetSteps function here
+        resetSteps()
 
         // Update the TextView with the current step count
         val stepsTextView: TextView = view.findViewById(R.id.steps)
         stepsTextView.text = getCurrentStepCount().toString()
 
         if (stepsTextView != null) {
-            // The view with ID "steps" was found, so you can safely access it.
+
             stepsTextView.text = getCurrentStepCount().toString()
         } else {
-            // Handle the case where the view with ID "steps" was not found.
-            // For example, you can log an error or show a message.
+
             Log.e("ChartFragment", "stepsTextView not found")
         }
 
-        // To save the step count and reset daily, you can do this in your code
+
         val stepCount = stepsTextView.text.toString().toInt()
         val currentDate = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(Date())
 
@@ -123,58 +121,58 @@ class ChartFragment : Fragment(), SensorEventListener {
         //------------Steps Count----------------
 
         //------------Radar-------------------
-        var runningHrs: String? = null
-        if (userId != null) {
-            totalHrsRunning(userId) { totalHours ->
-                // Use the total hours here
-                runningHrs = totalHours.toString()
-            }
-        }
-        var walkingHrs: String? = null
-        if (userId != null) {
-            totalHrsWalking(userId) { totalHours ->
-                // Use the total hours here
-                walkingHrs = totalHours.toString()
-            }
-        }
-        var cyclingHrs: String? = null
-        if (userId != null) {
-            totalHrsCycling(userId) { totalHours ->
-                // Use the total hours here
-                cyclingHrs = totalHours.toString()
-            }
-        }
-        var swimmingHrs: String? = null
-        if (userId != null) {
-            totalHrsSwimming(userId) { totalHours ->
-                // Use the total hours here
-                swimmingHrs = totalHours.toString()
-            }
-        }
-        var sportHrs: String? = null
-        if (userId != null) {
-            totalHrsSport(userId) { totalHours ->
-                // Use the total hours here
-                sportHrs = totalHours.toString()
-            }
-        }
-        var yogaHrs: String? = null
-        if (userId != null) {
-            totalHrsYoga(userId) { totalHours ->
-                // Use the total hours here
-                yogaHrs = totalHours.toString()
-            }
-        }
-        var gymHrs: String? = null
-        if (userId != null) {
-            totalHrsGym(userId) { totalHours ->
-                // Use the total hours here
-                gymHrs = totalHours.toString()
-            }
-        }
-
-
-
+//        var runningHrs: String? = null
+//        if (userId != null) {
+//            totalHrsRunning(userId) { totalHours ->
+//                // Use the total hours here
+//                runningHrs = totalHours.toString()
+//            }
+//        }
+//        var walkingHrs: String? = null
+//        if (userId != null) {
+//            totalHrsWalking(userId) { totalHours ->
+//                // Use the total hours here
+//                walkingHrs = totalHours.toString()
+//            }
+//        }
+//        var cyclingHrs: String? = null
+//        if (userId != null) {
+//            totalHrsCycling(userId) { totalHours ->
+//                // Use the total hours here
+//                cyclingHrs = totalHours.toString()
+//            }
+//        }
+//        var swimmingHrs: String? = null
+//        if (userId != null) {
+//            totalHrsSwimming(userId) { totalHours ->
+//                // Use the total hours here
+//                swimmingHrs = totalHours.toString()
+//            }
+//        }
+//        var sportHrs: String? = null
+//        if (userId != null) {
+//            totalHrsSport(userId) { totalHours ->
+//                // Use the total hours here
+//                sportHrs = totalHours.toString()
+//            }
+//        }
+//        var yogaHrs: String? = null
+//        if (userId != null) {
+//            totalHrsYoga(userId) { totalHours ->
+//                // Use the total hours here
+//                yogaHrs = totalHours.toString()
+//            }
+//        }
+//        var gymHrs: String? = null
+//        if (userId != null) {
+//            totalHrsGym(userId) { totalHours ->
+//                // Use the total hours here
+//                gymHrs = totalHours.toString()
+//            }
+//        }
+//
+//
+//
         radarChart = view.findViewById(R.id.radar_chart)
         val labels = listOf("Running", "Walking", "Cycling", "Swimming", "Sport", "Yoga", "Gym")
         val xAxis = radarChart.xAxis
@@ -191,28 +189,28 @@ class ChartFragment : Fragment(), SensorEventListener {
         list.add(RadarEntry(50F))
         list.add(RadarEntry(55F))
         list.add(RadarEntry(40F))
-        if (runningHrs != null) {
-            list.add(RadarEntry(runningHrs!!.toFloat()))
-        }
-        if (walkingHrs != null) {
-            list.add(RadarEntry(walkingHrs!!.toFloat()))
-        }
-        if (cyclingHrs != null) {
-            list.add(RadarEntry(cyclingHrs!!.toFloat()))
-        }
-        if (swimmingHrs != null) {
-            list.add(RadarEntry(swimmingHrs!!.toFloat()))
-        }
-        if (sportHrs != null) {
-            list.add(RadarEntry(sportHrs!!.toFloat()))
-        }
-        if (yogaHrs != null) {
-            list.add(RadarEntry(yogaHrs!!.toFloat()))
-        }
-        if (gymHrs != null) {
-            list.add(RadarEntry(gymHrs!!.toFloat()))
-        }
-
+//        if (runningHrs != null) {
+//            list.add(RadarEntry(runningHrs!!.toFloat()))
+//        }
+//        if (walkingHrs != null) {
+//            list.add(RadarEntry(walkingHrs!!.toFloat()))
+//        }
+//        if (cyclingHrs != null) {
+//            list.add(RadarEntry(cyclingHrs!!.toFloat()))
+//        }
+//        if (swimmingHrs != null) {
+//            list.add(RadarEntry(swimmingHrs!!.toFloat()))
+//        }
+//        if (sportHrs != null) {
+//            list.add(RadarEntry(sportHrs!!.toFloat()))
+//        }
+//        if (yogaHrs != null) {
+//            list.add(RadarEntry(yogaHrs!!.toFloat()))
+//        }
+//        if (gymHrs != null) {
+//            list.add(RadarEntry(gymHrs!!.toFloat()))
+//        }
+//
         val radarDataSet=RadarDataSet(list,"List")
 
         radarDataSet.lineWidth=2f
@@ -227,57 +225,57 @@ class ChartFragment : Fragment(), SensorEventListener {
         radarChart.animateY(2000)
         //------------Radar-------------------
 
-//        //------------Bar-------------------
-//        barChart = view.findViewById(R.id.bar_chart)
-//
-//        val list2: ArrayList<BarEntry> = ArrayList()
-//        list2.add(BarEntry(100f, 100f))
-//        list2.add(BarEntry(101f, 200f))
-//        list2.add(BarEntry(102f, 300f))
-//        list2.add(BarEntry(103f, 400f))
-//        list2.add(BarEntry(104f, 500f))
-//
-//        val barDataSet = BarDataSet(list2, "List")
-//
-//        barDataSet.setColors(ColorTemplate.MATERIAL_COLORS, 255)
-//        barDataSet.valueTextColor = Color.BLACK
-//
-//        val barData = BarData(barDataSet)
-//
-//        barChart.setFitBars(true)
-//
-//        barChart.data = barData
-//
-//        barChart.description.text = "Bar Chart"
-//
-//        barChart.animateY(2000)
-//        //------------Bar-------------------
-//
-//        //------------Pie-------------------
-//        pieChart = view.findViewById(R.id.pie_chart)
-//
-//        val list3: ArrayList<PieEntry> = ArrayList()
-//        list3.add(PieEntry(100f, "100"))
-//        list3.add(PieEntry(101f, "101"))
-//        list3.add(PieEntry(102f, "102"))
-//        list3.add(PieEntry(103f, "103"))
-//        list3.add(PieEntry(104f, "104"))
-//
-//        val pieDataSet = PieDataSet(list3, "List")
-//
-//        pieDataSet.setColors(ColorTemplate.MATERIAL_COLORS, 255)
-//        pieDataSet.valueTextColor = Color.BLACK
-//        pieDataSet.valueTextSize = 15f
-//
-//        val pieData = PieData(pieDataSet)
-//
-//        pieChart.data = pieData
-//
-//        pieChart.description.text = "Pie Chart"
-//
-//        pieChart.centerText = "List"
-//
-//        pieChart.animateY(2000)
+        //------------Bar-------------------
+        barChart = view.findViewById(R.id.bar_chart)
+
+        val list2: ArrayList<BarEntry> = ArrayList()
+        list2.add(BarEntry(100f, 100f))
+        list2.add(BarEntry(101f, 200f))
+        list2.add(BarEntry(102f, 300f))
+        list2.add(BarEntry(103f, 400f))
+        list2.add(BarEntry(104f, 500f))
+
+        val barDataSet = BarDataSet(list2, "List")
+
+        barDataSet.setColors(ColorTemplate.MATERIAL_COLORS, 255)
+        barDataSet.valueTextColor = Color.BLACK
+
+        val barData = BarData(barDataSet)
+
+        barChart.setFitBars(true)
+
+        barChart.data = barData
+
+        barChart.description.text = "Water Intake"
+
+        barChart.animateY(2000)
+        //------------Bar-------------------
+
+        //------------Pie-------------------
+        pieChart = view.findViewById(R.id.pie_chart)
+
+        val list3: ArrayList<PieEntry> = ArrayList()
+        list3.add(PieEntry(100f, "100"))
+        list3.add(PieEntry(101f, "101"))
+        list3.add(PieEntry(102f, "102"))
+        list3.add(PieEntry(103f, "103"))
+        list3.add(PieEntry(104f, "104"))
+
+        val pieDataSet = PieDataSet(list3, "List")
+
+        pieDataSet.setColors(ColorTemplate.MATERIAL_COLORS, 255)
+        pieDataSet.valueTextColor = Color.BLACK
+        pieDataSet.valueTextSize = 15f
+
+        val pieData = PieData(pieDataSet)
+
+        pieChart.data = pieData
+
+        pieChart.description.text = "Pie Chart"
+
+        pieChart.centerText = "List"
+
+        pieChart.animateY(2000)
 
         //------------Pie-------------------
 
@@ -337,7 +335,7 @@ class ChartFragment : Fragment(), SensorEventListener {
     }
 
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
-        // Empty implementation, as this method is required by SensorEventListener
+
     }
 
 
@@ -435,7 +433,7 @@ class ChartFragment : Fragment(), SensorEventListener {
             .addOnFailureListener { exception ->
                 // Handle the error
                 Log.e(ContentValues.TAG, "Error getting documents: ", exception)
-                // You can also invoke the callback with an error value if needed
+
             }
     }
     fun totalHrsCycling(userId: String, callback: (Double) -> Unit) {
@@ -468,7 +466,7 @@ class ChartFragment : Fragment(), SensorEventListener {
             .addOnFailureListener { exception ->
                 // Handle the error
                 Log.e(ContentValues.TAG, "Error getting documents: ", exception)
-                // You can also invoke the callback with an error value if needed
+
             }
     }
     fun totalHrsWalking(userId: String, callback: (Double) -> Unit) {
@@ -501,7 +499,7 @@ class ChartFragment : Fragment(), SensorEventListener {
             .addOnFailureListener { exception ->
                 // Handle the error
                 Log.e(ContentValues.TAG, "Error getting documents: ", exception)
-                // You can also invoke the callback with an error value if needed
+
             }
     }
     fun totalHrsSwimming(userId: String, callback: (Double) -> Unit) {
@@ -534,7 +532,7 @@ class ChartFragment : Fragment(), SensorEventListener {
             .addOnFailureListener { exception ->
                 // Handle the error
                 Log.e(ContentValues.TAG, "Error getting documents: ", exception)
-                // You can also invoke the callback with an error value if needed
+
             }
     }
     fun totalHrsSport(userId: String, callback: (Double) -> Unit) {
@@ -567,7 +565,7 @@ class ChartFragment : Fragment(), SensorEventListener {
             .addOnFailureListener { exception ->
                 // Handle the error
                 Log.e(ContentValues.TAG, "Error getting documents: ", exception)
-                // You can also invoke the callback with an error value if needed
+
             }
     }
     fun totalHrsYoga(userId: String, callback: (Double) -> Unit) {
@@ -600,7 +598,7 @@ class ChartFragment : Fragment(), SensorEventListener {
             .addOnFailureListener { exception ->
                 // Handle the error
                 Log.e(ContentValues.TAG, "Error getting documents: ", exception)
-                // You can also invoke the callback with an error value if needed
+
             }
     }
     fun totalHrsGym(userId: String, callback: (Double) -> Unit) {
@@ -633,7 +631,7 @@ class ChartFragment : Fragment(), SensorEventListener {
             .addOnFailureListener { exception ->
                 // Handle the error
                 Log.e(ContentValues.TAG, "Error getting documents: ", exception)
-                // You can also invoke the callback with an error value if needed
+
             }
     }
 

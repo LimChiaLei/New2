@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -37,6 +39,12 @@ class StepCountRecordFragment : Fragment() {
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
+        val backBtn = view.findViewById<Button>(R.id.backBtn)
+
+        backBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_stepCountRecordFragment_to_profileFragment)
+        }
+
         return view
     }
 
@@ -53,8 +61,8 @@ class StepCountRecordFragment : Fragment() {
         val cursor: Cursor = db.rawQuery(query, selectionArgs)
 
         while (cursor.moveToNext()) {
-            val step = cursor.getInt(0) // Assuming COLUMN_STEP is the first column (index 0)
-            val date = cursor.getString(1) // Assuming COLUMN_DATE is the second column (index 1)
+            val step = cursor.getInt(0)
+            val date = cursor.getString(1)
             val stepCount = StepCountItem(date, step)
             stepCountList.add(stepCount)
         }

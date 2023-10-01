@@ -47,57 +47,20 @@ class HomeFragment : Fragment() {
         recyclerView.layoutManager = gridLayoutManager
         dataList = mutableListOf()
 
-        androidData = PlanDataClass("Keep Fit", getString(R.string.keep_fit_plan), getString(R.string.meal_plan), R.drawable.meal_plan)
+        androidData = PlanDataClass("Beginner", getString(R.string.beginner_plan), getString(R.string.meal_plan), R.drawable.meal_plan)
         dataList.add(androidData)
 
-        androidData = PlanDataClass("7-Day Weight Loss Meal Plan", getString(R.string.weight_loss_plan), getString(R.string.meal_plan), R.drawable.meal_plan)
+        androidData = PlanDataClass("Keep Fit", getString(R.string.keep_fit_plan), getString(R.string.meal_plan), R.drawable.keepfit_plan)
         dataList.add(androidData)
 
-        androidData = PlanDataClass("High-Protein Meal Plan for Muscle Building", getString(R.string.muscle_building_plan), getString(R.string.meal_plan), R.drawable.meal_plan)
+        androidData = PlanDataClass("7-Day Weight Loss Meal Plan", getString(R.string.weight_loss_plan), getString(R.string.meal_plan), R.drawable.weightloss_plan)
+        dataList.add(androidData)
+
+        androidData = PlanDataClass("High-Protein Meal Plan for Muscle Building", getString(R.string.muscle_building_plan), getString(R.string.meal_plan), R.drawable.highprotein_plan)
         dataList.add(androidData)
 
         adapter = MyAdapter(requireContext(), dataList)
         recyclerView.adapter = adapter
-
-
-
-        // Initialize dataList here before using it
-//        dataList = mutableListOf()
-        //------------Plan------------------
-
-
-
-//        val dbHelper = PlanDatabaseHelper(requireContext())
-//        val planIds = listOf(1, 2, 3)
-//        for (planId in planIds) {
-//            val retrievedPlan = dbHelper.getPlanById(planId.toLong())
-//            if (retrievedPlan != null) {
-//                val androidData = PlanDataClass(
-//                    planId.toLong(), // Convert planId to Long
-//                    retrievedPlan.title,
-//                    retrievedPlan.type,
-//                    retrievedPlan.content,
-//                    retrievedPlan.img
-//                )
-//                dataList.add(androidData)
-//            }
-//        }
-
-
-        //------------Plan------------------
-
-
-//        searchView = rootView.findViewById(R.id.search)
-//        dataList = mutableListOf()
-//
-//        recyclerView = rootView.findViewById(R.id.recyclerView)
-//        val gridLayoutManager = GridLayoutManager(requireContext(), 1)
-//        recyclerView.layoutManager = gridLayoutManager
-//
-//        // Retrieve data from the database and pass it to the adapter
-//        val planList = retrieveDataFromDatabase()
-//        adapter = MyAdapter(planList)
-//        recyclerView.adapter = adapter
 
         //-------------------------BottomNavigationView---------------------------------
         val bottomNavView = view?.findViewById<BottomNavigationView>(R.id.bottomNavView)
@@ -155,13 +118,5 @@ class HomeFragment : Fragment() {
         }
     }
 
-    // Function to retrieve data from the database
-//    private fun retrieveDataFromDatabase(): List<PlanDataClass> {
-//        val dbHelper = PlanDatabaseHelper(requireContext())
-//        // Assuming you have a function in your PlanDatabaseHelper to fetch all plans,
-//        // you can use it to retrieve the data and return it as a list.
-//        val planList: List<PlanDataClass> = dbHelper.getAllPlans()
-//        return planList
-//    }
 }
 

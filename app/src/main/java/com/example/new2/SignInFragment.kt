@@ -47,6 +47,15 @@ class SignInFragment : Fragment() {
             if (name.isEmpty() || email.isEmpty() || username.isEmpty() || password.isEmpty()) {
                 // Display a toast message if any of the fields is empty
                 Toast.makeText(requireContext(), "Please fill in all fields", Toast.LENGTH_SHORT).show()
+            } else if (!isValidEmail(email)) {
+                // Check if the email is valid
+                Toast.makeText(requireContext(), "Invalid email address", Toast.LENGTH_SHORT).show()
+            } else if (!isValidUsername(username)) {
+                // Check if the username is valid
+                Toast.makeText(requireContext(), "Invalid username", Toast.LENGTH_SHORT).show()
+            } else if (!isValidPassword(password)) {
+                // Check if the password is valid
+                Toast.makeText(requireContext(), "Invalid password", Toast.LENGTH_SHORT).show()
             } else {
                 val user = hashMapOf(
                     "name" to name,
@@ -108,14 +117,7 @@ class SignInFragment : Fragment() {
             findNavController().navigate(R.id.action_signInFragment_to_loginFragment)
         }
 
-//        // Instantiate your database helper class
-//        val dbHelper  = StepCountDatabaseHelper(requireContext())
-//
-//        // Call the insertStepCount function to insert a new record
-//        dbHelper.insertStepCount(1000, "2023-09-30", "1001")
-//
-//        // Close the database connection when you're done with it
-//        dbHelper.close()
+
 
 
         return rootView
@@ -157,4 +159,19 @@ class SignInFragment : Fragment() {
             }
     }
 
+    // Function to validate email format
+    private fun isValidEmail(email: String): Boolean {
+        val emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
+        return email.matches(emailPattern.toRegex())
+    }
+
+    // Function to validate username (you can define your validation rules)
+    private fun isValidUsername(username: String): Boolean {
+        return username.length >= 5
+    }
+
+    // Function to validate password (you can define your validation rules)
+    private fun isValidPassword(password: String): Boolean {
+        return password.length >= 6
+    }
 }

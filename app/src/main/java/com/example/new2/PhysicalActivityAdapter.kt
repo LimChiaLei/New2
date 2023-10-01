@@ -22,7 +22,7 @@ class PhysicalActivityAdapter(private val data: MutableList<PhysicalActivity>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemView = LayoutInflater.from(parent.context)
-            .inflate(R.layout.physical_activity_item, parent, false) // Replace with your layout
+            .inflate(R.layout.physical_activity_item, parent, false)
         return ViewHolder(itemView)
     }
 
@@ -33,10 +33,10 @@ class PhysicalActivityAdapter(private val data: MutableList<PhysicalActivity>) :
         holder.dateTextView.text = item.date
         holder.timeTextView.text = item.time
         holder.titleTextView.text = item.title
-        holder.hrsTextView.text = "${item.hours} hrs" // Format duration
-        holder.minsTextView.text = "${item.minute} mins" // Format duration
+        holder.hrsTextView.text = "${item.hours} hrs"
+        holder.minsTextView.text = "${item.minute} mins"
         holder.userIdTextView.text = item.userId
-        // You can customize the format further if needed
+
     }
 
     fun getItem(position: Int): PhysicalActivity {

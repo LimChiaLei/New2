@@ -47,7 +47,7 @@ class MyAdapter(private val context: Context, private var dataList: List<PlanDat
 
             val detailFragment = DetailFragment() // Create an instance of your DetailFragment
 
-            // Pass data to the fragment (if needed)
+
             val args = Bundle()
             args.putInt("Image", data.img)
             args.putString("Title", data.title)
@@ -56,7 +56,7 @@ class MyAdapter(private val context: Context, private var dataList: List<PlanDat
 
             // Replace the current fragment with the DetailFragment
             fragmentTransaction.replace(R.id.detailFragment, detailFragment)
-            fragmentTransaction.addToBackStack(null) // Add this transaction to the back stack (optional)
+            fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()
         }
 
@@ -75,64 +75,5 @@ class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     var recType: TextView = itemView.findViewById(R.id.recType)
     var recCard: CardView = itemView.findViewById(R.id.recCard)
 }
-//
-////class MyAdapter(private var planList: List<PlanDataClass>) : RecyclerView.Adapter<MyAdapter.PlanViewHolder>() {
-//class MyAdapter(private var planList: List<PlanDataClass>,context: Context) : RecyclerView.Adapter<MyAdapter.PlanViewHolder>() {
-//
-//    inner class PlanViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-//        val titleTextView: TextView = itemView.findViewById(R.id.recTitle)
-//        val typeTextView: TextView = itemView.findViewById(R.id.recType)
-//        val contentTextView: TextView = itemView.findViewById(androidx.appcompat.R.id.content)
-//        val imgImageView: ImageView = itemView.findViewById(androidx.appcompat.R.id.image)
-//
-////        init {
-////            itemView.setOnClickListener {
-////                val position = adapterPosition
-////                if (position != RecyclerView.NO_POSITION) {
-////                    val clickedItem = planList[position]
-////                    // Navigate to the detail fragment and pass the data
-////                    val bundle = Bundle()
-////                    bundle.putLong("planId", clickedItem.id)
-////                    itemView.findNavController().navigate(R.id.detailFragment, bundle)
-////                }
-////            }
-////        }
-//    }
-//
-//    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlanViewHolder {
-//        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.recycler_item, parent, false)
-//        return PlanViewHolder(itemView)
-//    }
-//
-//    override fun onBindViewHolder(holder: PlanViewHolder, position: Int) {
-//        val currentItem = planList[position]
-//        holder.titleTextView.text = currentItem.title
-//        holder.typeTextView.text = currentItem.type
-//        holder.contentTextView.text = currentItem.content
-//        holder.imgImageView.setImageResource(currentItem.img.toInt()) // Assuming 'img' is a resource ID
-//
-//    }
-//
-////    override fun getItemCount(): Int {
-////        return planList.size
-////    }
-//    override fun getItemCount(): Int = planList.size
-//
-//    fun refreshData(newPlanList: List<PlanDataClass>){
-//        planList = newPlanList
-//        notifyDataSetChanged()
-//    }
-//
-////    fun setSearchList(newList: List<PlanDataClass>) {
-////        // Update the adapter's data with the new list for search
-////        planList.clear()
-////        planList.addAll(newList)
-////        notifyDataSetChanged()
-////    }
-//
-//    fun setSearchList(dataSearchList: List<PlanDataClass>) {
-//        this.planList = dataSearchList
-//        notifyDataSetChanged()
-//    }
-//}
+
 

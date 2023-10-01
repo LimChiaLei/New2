@@ -62,17 +62,5 @@ class DetailFragment : Fragment() {
     }
 }
 
-    // Function to retrieve a specific plan from the database
-    // Function to retrieve a specific plan from the database
-//    private fun retrievePlanFromDatabase(planId: Long): PlanDataClass {
-//        val dbHelper = PlanDatabaseHelper(requireContext())
-//        val plan = dbHelper.getPlanById(planId)
-//        if (plan != null) {
-//            return plan
-//        } else {
-//            // Handle the case where the plan with the given planId was not found in the database
-//            // You can return a default PlanDataClass or handle the error as needed
-//            return PlanDataClass(0, "Not Found", "", "", "")
-//        }
-//    }
+
 

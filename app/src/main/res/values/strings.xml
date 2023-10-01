@@ -42,6 +42,41 @@
     <string name="meal_plan_title">Meal Plan Title</string>
     <string name="meal_plan_detail_desc">Meal Plan Description</string>
 
+        <string name="beginner_plan">
+            Breakfast:\n
+            Option 1: Scrambled Eggs with Spinach and Whole Wheat Toast\n
+            •Scramble 2 eggs with a handful of spinach in a non-stick pan.\n
+            •Serve with a slice of whole wheat toast.\n
+            Option 2: Greek Yogurt with Berries and Honey\n
+            •Mix Greek yogurt with a handful of mixed berries (e.g., strawberries, blueberries,\n
+            •raspberries) and drizzle with honey.\n\n
+
+            Snack:\n
+            •A small handful of mixed nuts (e.g., almonds, walnuts, or cashews) and an apple or a banana.\n\n
+
+            Lunch:\n
+            •Grilled Chicken Salad\n
+            •Grill a chicken breast and slice it into strips.\n
+            •Toss it with mixed greens, cherry tomatoes, cucumbers, and a vinaigrette dressing.\n\n
+
+            Snack:\n
+            •Carrot and Celery Sticks with Hummus\n\n
+
+            Dinner:\n
+            Baked Salmon with Quinoa and Steamed Broccoli\n
+            •Season a salmon fillet with lemon juice, garlic, and your choice of herbs.\n
+            •Bake in the oven at 375°F (190°C) for about 15-20 minutes.\n
+            •Serve with cooked quinoa and steamed broccoli.\n\n
+
+            Snack (if needed):\n
+            •A small serving of low-fat cottage cheese with a few pineapple chunks.\n\n
+
+            Hydration:\n
+            •Throughout the day, drink plenty of water (at least 8-10 cups).\n\n\n
+
+
+        </string>
+
     <string name="keep_fit_plan">
         A meal plan to keep fit typically focuses on providing your body with the right balance of
         nutrients, including lean protein, complex carbohydrates, healthy fats, and a variety of

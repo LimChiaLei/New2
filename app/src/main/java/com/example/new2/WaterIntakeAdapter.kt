@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.new2.R
 import com.example.new2.WaterIntakeRecord
 
-class WaterIntakeAdapter(private val waterIntakeRecords: List<WaterIntakeRecord>) :
+class WaterIntakeAdapter(private val waterIntakeRecords: MutableList<WaterIntakeRecord>) :
     RecyclerView.Adapter<WaterIntakeAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -34,7 +34,7 @@ class WaterIntakeAdapter(private val waterIntakeRecords: List<WaterIntakeRecord>
             120 -> R.drawable.cup120
             180 -> R.drawable.cup180
             240 -> R.drawable.cup240
-            else -> R.drawable.cup0 // Default image if no match is found
+            else -> R.drawable.cup0
         }
         holder.listCup.setImageResource(cupDrawableId)
     }
@@ -43,11 +43,22 @@ class WaterIntakeAdapter(private val waterIntakeRecords: List<WaterIntakeRecord>
         return waterIntakeRecords.size
     }
 
+    fun getItem(position: Int): WaterIntakeRecord {
+        return waterIntakeRecords[position]
+    }
+
+    fun removeItem(position: Int) {
+        waterIntakeRecords.removeAt(position)
+        notifyItemRemoved(position)
+
+    }
+
+
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val listDate: TextView = itemView.findViewById(R.id.listDate)
         val listTime: TextView = itemView.findViewById(R.id.listTime)
         val listDrinked: TextView = itemView.findViewById(R.id.listDrinked)
         val listCup: ImageView = itemView.findViewById(R.id.listCup)
-        // Add references to other UI elements in the item layout here
+
     }
 }

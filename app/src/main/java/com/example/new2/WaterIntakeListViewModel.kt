@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 
 class WaterIntakeListViewModel : ViewModel() {
     var waterIntakeText = ""
-    var waterIntakeImage = 0 // Resource ID for the image
+    var waterIntakeImage = 0
 
     fun updateWaterIntakeInfo(waterIntakeValue: Int) {
         when (waterIntakeValue) {
@@ -25,8 +25,8 @@ class WaterIntakeListViewModel : ViewModel() {
                 waterIntakeImage = R.drawable.cup240
             }
             else -> {
-                waterIntakeText = "" // Default text when the value doesn't match any of the cases
-                waterIntakeImage = 0 // Default image when the value doesn't match any of the cases
+                waterIntakeText = ""
+                waterIntakeImage = 0
             }
         }
     }

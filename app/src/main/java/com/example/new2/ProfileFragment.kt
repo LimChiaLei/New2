@@ -76,26 +76,22 @@ class ProfileFragment : Fragment() {
 
         // Set an OnClickListener for the chartFeild
         chartFeild.setOnClickListener {
-            // Replace the current fragment with the target fragment
             findNavController().navigate(R.id.action_profileFragment_to_stepCountRecordFragment)
         }
 
         // Set an OnClickListener for the chartIcon (if needed)
         chartIcon.setOnClickListener {
-            // Replace the current fragment with the target fragment
             findNavController().navigate(R.id.action_profileFragment_to_stepCountRecordFragment)
         }
 
         // Set an OnClickListener for the right2 (if needed)
         right2.setOnClickListener {
-            // Replace the current fragment with the target fragment
             findNavController().navigate(R.id.action_profileFragment_to_stepCountRecordFragment)
         }
 
 
         // Set an OnClickListener to navigate to ProfileViewFragment
         profilePicImageView.setOnClickListener {
-            // Navigate to the ProfileViewFragment
             findNavController().navigate(R.id.action_profileFragment_to_viewProfileFragment)
         }
 

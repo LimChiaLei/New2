@@ -57,7 +57,7 @@ class LoginFragment : Fragment() {
                     .addOnSuccessListener { querySnapshot ->
                         if (!querySnapshot.isEmpty) {
                             // User exists with the provided username and password
-                            val user = querySnapshot.documents[0] // Assuming only one user can match the criteria
+                            val user = querySnapshot.documents[0]
                             // Save the user's ID in SharedPreferences
                             val userId = user.getString("userid")
 

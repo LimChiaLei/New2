@@ -42,7 +42,7 @@ class WaterIntakeAddFragment : Fragment() {
         valueTextView = view.findViewById(R.id.valuetxt)
         val cupImg = view.findViewById<ImageView>(R.id.cupImg)
 
-        seekBar.max = 4  // Set the maximum value
+        seekBar.max = 4
 
         seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
@@ -61,11 +61,11 @@ class WaterIntakeAddFragment : Fragment() {
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {
-                // Not needed for this example
+
             }
 
             override fun onStopTrackingTouch(seekBar: SeekBar?) {
-                // Not needed for this example
+
             }
         })
 
@@ -95,7 +95,7 @@ class WaterIntakeAddFragment : Fragment() {
                     .addOnSuccessListener { documentReference ->
                         // The record was successfully added
                         Log.d(TAG, "Water intake record added with ID: ${documentReference.id}")
-                        // Show a success message (you can use a Toast or Snackbar)
+
                         Toast.makeText(requireContext(), "Water intake recorded successfully", Toast.LENGTH_SHORT).show()
 
                         // Redirect to the list fragment
@@ -104,7 +104,7 @@ class WaterIntakeAddFragment : Fragment() {
                     .addOnFailureListener { e ->
                         // Handle any errors that occurred while adding the record
                         Log.w(TAG, "Error adding water intake record", e)
-                        // Show an error message (you can use a Toast or Snackbar)
+
                         Toast.makeText(requireContext(), "Failed to record water intake", Toast.LENGTH_SHORT).show()
                     }
             }

@@ -15,7 +15,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 class SwipeToDeletePA(
     private val adapter: PhysicalActivityAdapter,
     private val db: FirebaseFirestore,
-    private val fragment: Fragment // Pass the current fragment for navigation
+    private val fragment: Fragment
 
 
 ) : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT) {
